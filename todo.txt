@@ -1,0 +1,44 @@
+Checklist per presentazione all'esame:
+ - Compilazione corretta.
+ - Esecuzione e mostrare che e' demone.
+ - Struttura dato ombrellone
+ - Mostrare piu' client connessi.
+ - Ordine comandi:
+    - Tutte le AVAILABLE
+        - Gestione delle available
+    - CANCEL SCORRETTA
+    - CANCEL CORRETTA 4 190719
+    - AVAILABLE SU UN ALTRO CLIENT
+    - AVAILABLE SU FILA SU ALTRO CLIENT 
+    - BOOK STESSO OMBRELLONE SU PIU CLIENT, OGNI BOOK TIPO DIVERSO
+    - CANCELLA I PRIMI DUE BOOK E FAI PASSARE IL TERZO
+    - CHIUSURA CLIENT
+    - CONNESSIONE NUOVO client
+    - NUMERO CLIENT SIMULTANEI PROVVISORI A 4, IN MODO DA MOSTRARE LA NOK
+    - CHIUSURA SERVER
+
+
+Audio Effe:
+    - Un array di array, dove l'array principale erano i mesi, e dove ogni array che partiva dal mese aveva tutti i giorni del mese. Infatti registravamo 
+    i periodi piu' lunghi di un giorno e le prenotazioni in futuro. 
+    - Prenotazioni scritte su un file, quando veniva prenotato un altro ombrellone, veniva controllato il file. Se i giorni della nuova prenotazione non andavano in conflitto, scriveva su file prenotazione.
+    - Stato ombrellone per ogni giorno
+
+Audio Stefano:
+    - Array invece di matrice, migliora prestazioni numero ombrellone%lunghezzariga
+    - Struttura dati ombrellone:
+        - numero ombrellone, numero fila non e' essenziale, ma
+        - array di prenotazioni, dove l'array e' uguale al numero di giorni in un anno
+            - creare un array di 365 elementi per ogni ombrellone blocca tanta memoria
+            - quindi meglio creare una lista, o un array solo di prenotazioni
+            - date rappresentate come interi, date a stringa si devono convertire due volte
+            - anno mese giorno formato attaccati
+                - trasfor
+                mare data inizio prenotazione e data fine prenotazione in array
+                - due array separati, uno per data inizio e uno per date fine, inizio[1] fine[1] e' legata alla stessa prenotazione 
+                - allocare dinamicamente con liste e' sistema piu' "avanzato"
+                - teniamo il conto del numero totale di prenotazioni
+    - Sistema va a controllare nella lista se la data e' compresa tra data inizio e data fine scorrendo ogni nodo della lista.
+    - Ogni nodo della lista legata ad ogni ombrellone e' una prenotazione su quell'ombrellone.
+    - L'if e' quello scritto nel prototipo.
+
